@@ -78,7 +78,8 @@ cd web && npm run build
 cd ../server && npm start
 ```
 
-启动后访问 http://localhost:8787
+启动后（前端查询展示）访问 http://localhost:8787
+（后台维护配置）访问 http://localhost:8787/admin/login 登录后进管理后台
 
 > 开发阶段如需热更新：`cd web && npm run dev` 启动 Vite 开发服务器，然后修改 `vite.config.ts` 中的代理配置指向后端 8787 端口。
 
