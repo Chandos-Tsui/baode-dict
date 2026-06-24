@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 沉稳墨色系：暖灰底 + 赭石主色 + 青灰辅助 */
+    --background: 38 18% 95%;
+    --foreground: 30 8% 18%;
+    --card: 38 12% 97%;
+    --card-foreground: 30 8% 18%;
+    --popover: 38 12% 97%;
+    --popover-foreground: 30 8% 18%;
+    --primary: 18 35% 38%;
+    --primary-foreground: 38 18% 97%;
+    --secondary: 35 10% 90%;
+    --secondary-foreground: 30 8% 25%;
+    --muted: 35 8% 91%;
+    --muted-foreground: 30 6% 45%;
+    --accent: 175 22% 36%;
+    --accent-foreground: 38 18% 97%;
+    --destructive: 10 30% 42%;
+    --destructive-foreground: 38 18% 97%;
+    --border: 35 8% 87%;
+    --input: 35 8% 89%;
+    --ring: 18 35% 38%;
+    --radius: 0.375rem;
+    --sidebar-background: 38 14% 93%;
+    --sidebar-foreground: 30 8% 22%;
+    --sidebar-primary: 18 35% 38%;
+    --sidebar-primary-foreground: 38 18% 97%;
+    --sidebar-accent: 35 10% 89%;
+    --sidebar-accent-foreground: 30 8% 22%;
+    --sidebar-border: 35 8% 86%;
+    --sidebar-ring: 18 35% 38%;
+  }
+
+  .dark {
+    --background: 30 6% 10%;
+    --foreground: 38 10% 88%;
+    --card: 30 6% 13%;
+    --card-foreground: 38 10% 88%;
+    --popover: 30 6% 13%;
+    --popover-foreground: 38 10% 88%;
+    --primary: 18 25% 52%;
+    --primary-foreground: 30 6% 10%;
+    --secondary: 30 6% 20%;
+    --secondary-foreground: 38 10% 88%;
+    --muted: 30 6% 20%;
+    --muted-foreground: 38 8% 58%;
+    --accent: 175 18% 48%;
+    --accent-foreground: 30 6% 10%;
+    --destructive: 10 22% 48%;
+    --destructive-foreground: 38 10% 88%;
+    --border: 30 6% 24%;
+    --input: 30 6% 24%;
+    --ring: 18 25% 52%;
+    --sidebar-background: 30 6% 12%;
+    --sidebar-foreground: 38 10% 82%;
+    --sidebar-primary: 18 25% 52%;
+    --sidebar-primary-foreground: 30 6% 10%;
+    --sidebar-accent: 30 6% 20%;
+    --sidebar-accent-foreground: 38 10% 88%;
+    --sidebar-border: 30 6% 24%;
+    --sidebar-ring: 18 25% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* 标题：宋体风格，古典稳重 */
+  .font-display {
+    font-family: "Songti SC", "STSong", "SimSun", "Noto Serif SC", "宋体", serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  /* 晋语拼音：等宽 */
+  .font-pinyin {
+    font-family: "SF Mono", "Menlo", "Consolas", "Courier New", monospace;
+    letter-spacing: 0.04em;
+  }
+  /* 国际音标：衬线 */
+  .font-ipa {
+    font-family: "Doulos SIL", "Charis SIL", "Gentium", "Times New Roman", serif;
+  }
+  /* 主体内容容器 */
+  .bg-paper {
+    background-color: hsl(var(--background));
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+}

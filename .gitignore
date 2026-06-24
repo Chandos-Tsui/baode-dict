@@ -1,0 +1,13 @@
+node_modules/
+dist/
+server/data/baode.db
+server/data/baode.db-shm
+server/data/baode.db-wal
+server/uploads/audio/*
+!server/uploads/audio/.gitkeep
+server/.env
+.env
+.codebuddy/
+.workbuddy/
+.DS_Store
+*.log
